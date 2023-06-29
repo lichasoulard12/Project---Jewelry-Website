@@ -1,0 +1,114 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* -- HERRAMIENTAS -- */
+@import "herramientas/mixin";
+@import "herramientas/extend";
+@import "herramientas/variables";
+
+/* -- HTMLS -- */
+@import "pages/index.scss";
+
+/* -- BODY -- */ 
+body{
+    font-family: 'Agdasima', sans-serif;
+    background-color: rgb(230, 230, 230);
+}
+
+/* -- HEADER -- */
+header{
+    background-color: rgb(171, 166, 166);
+    @include marypad (0, 0.5rem);
+    border-bottom: 3px solid rgb(46, 46, 46);
+    .titulo-header{
+        display: flex;
+
+        /* -- BARRA DE BUSQUEDA -- */
+        .barra-busqueda{
+            @include wyh (100px, 65px);
+            .barra-busqueda-dos{
+                padding: 10px;
+                position: absolute;
+                right: 20px;
+                input{
+                    outline: none;
+                    height: 40px;
+                    width: 0;
+                    padding: 0 15px;
+                    color: black;
+                    border-radius: 50px;
+                    font-size: 15px;
+                    border: 1px solid rgb(0, 0, 0);
+                    transition: all .7s ease;
+                }
+                .btn{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 60px;
+                    height: 60px;
+                    background-color: black;
+                    line-height: 60px;
+                    border-radius: 50%;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: .5s;
+                    i{
+                        font-size: 25px;
+                        color: white;
+                        line-height: 60px;
+                        transition: all .7s ease;
+                    }
+                }
+                .btn:hover{
+                    background-color:rgb(46, 46, 46) ;
+                }
+                img{
+                    object-fit: none;
+                }
+            }
+            .barra-busqueda-dos:hover input{
+                width: 350px;
+            }
+            .barra-busqueda-dos:hover i{
+                transform: rotate(-360deg) ;
+            }
+        }
+    }
+    /* -- FIN BARRA DE BUSQUEDA -- */
+
+    h1{
+        color: rgb(62, 46, 6);
+        padding: 0.5rem;
+    }
+    hr{
+        margin-bottom: 0.5rem;
+    }
+
+    /* -- MENÚ DE NAVEGACIÓN -- */
+    .menu-nav{
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li{
+                padding: 0.5rem;
+                list-style: none;
+                font-size: larger;
+                a{
+                    text-decoration: none;
+                    text-shadow: 1px 1px 3px rgb(24, 23, 23);
+                    color: black;
+                }
+                a:hover{
+                    color: rgb(55, 49, 49);
+                    text-decoration: underline;
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,19 @@
+/* MAIN INDEX */
+
+.main-index{
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2{
+            text-align: center;
+            @include marypad (2px, 0.5rem);
+        }
+        img{
+            @include wyh (500px, auto);
+            border-radius: 30px;
+        }
+    }
+    
+}
