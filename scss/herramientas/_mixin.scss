@@ -1,10 +1,10 @@
-/* margin y padding */
+// margin y padding
 @mixin marypad ($margin, $padding){
     margin: $margin;
     padding: $padding;
 }
 
-/* tamaños */
+// tamaños
 @mixin wyh ($width, $height){
     width: $width;
     height: $height;
