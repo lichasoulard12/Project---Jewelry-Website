@@ -23,11 +23,11 @@ body{
 header{
     background-color: rgb(171, 166, 166);
     @include marypad (0, 0.5rem);
-    border-bottom: 3px solid rgb(46, 46, 46);
+    border-bottom: 3px solid $color-border;
     
     /* -- HEADER DE LA PÁGINA -- */
     h1{
-        color: rgb(62, 46, 6);
+        color: $color-h1;
         padding: 0.5rem;
     }
     hr{
@@ -116,7 +116,82 @@ header{
 }
 
 /* -- MAIN -- */
+main{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto;
 
+    /* -- PORTADA INDEX -- */
+    .portada-index{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        h2{
+            position: absolute;
+            z-index: 10;
+            bottom: 60px;
+            @include marypad (2px, 0.5rem);
+            text-shadow: 1px 1px 5px black;
+            text-align: center;
+        }
+        img{
+            margin: 0.5rem;
+            @include wyh (800px, 300px);
+            border-radius: 30px;
+            opacity: 0.7;
+        }
+    }
+
+    /* -- ASIDE CON REDES -- */
+    .aside-redes{
+        display: inline-block;
+        border: 3px solid $color-border;
+        border-radius: 8px;
+        @include marypad (0.5rem, 0.5rem);
+        background-color: rgb(190, 190, 190);
+        box-shadow: 2px 3px 10px 0 black;
+        height: fit-content;
+        position: sticky;
+        top: 10px;
+        h3{
+            text-decoration: underline;
+            font-size: 20px;
+        }
+        h4{
+            font-size: 18px;
+        }
+        .lista-redes{
+            list-style: none;
+            li{
+                margin: 8px 0 8px 0;
+                a{
+                    color: black;
+                    font-size: 14px;
+                    i:hover{
+                        font-style: italic;
+                    }
+                }
+                a:hover{
+                    color: rgb(43, 41, 41);
+                }
+            }
+        }
+        .lista-contacto{
+            list-style: none;
+            li{
+                margin: 8px 0 8px 0;
+                color: black;
+                font-size: 14px;
+                i{
+                    padding: 2px;
+                }
+            }
+            
+        }
+    }
+}
 
 
 /* -- FOOTER -- */

@@ -1,51 +1,64 @@
-/* MAIN INDEX */
 
+/* MAIN INDEX */
 .main-index{
-    .portada-index{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        h2{
-            position: absolute;
-            z-index: 10;
-            bottom: 60px;
-            @include marypad (2px, 0.5rem);
-            text-shadow: 1px 1px 5px black;
-            text-align: center;
-        }
-        img{
-            margin: 0.5rem;
-            @include wyh (800px, 300px);
-            border-radius: 30px;
-            opacity: 0.7;
-        }
-    }
-    
     /* -- SECCION PRODUCTOS - INDEX --  */
-    h3{
-        text-decoration: underline;
-        text-align: center;
-        font-size: larger;
-    }
-    .contenedor-productos{
-        display: flex;
-        justify-content: center;
-        
-        .nuestros-productos{
-            @include wyh (900px, auto);
-            display: grid;
-            grid-template-columns: repeat(3, 300px);
-            justify-items: center;
-            gap: 5px;
-            .producto{
-                background-color: rebeccapurple;
-                @include marypad (0.5rem, 5px);
-                @include wyh (100px, 100px);
+    .columna-medio{
+        hr{
+            margin: 1rem;
+        }
+        .seccion-productos-index{
+            h3{
+                text-decoration: underline;
+                text-align: center;
+                font-size: larger;
+            }
+            .contenedor-productos{
+                display: flex;
+                justify-content: center;
+                .nuestros-productos{
+                    @include wyh (900px, auto);
+                    display: grid;
+                    grid-template-columns: repeat(3, 300px);
+                    justify-items: center;
+                    gap: 5px;
+                    .producto{
+                        background-color: rgb(190, 190, 190);
+                        outline: 3px solid $color-border;
+                        border-radius: 8px;
+                        box-shadow: 2px 3px 10px 0 black;
+                        @include marypad (0.5rem, 0);
+                        @include wyh (200px, 210px);
+                        position: relative;
+                        img{
+                            @include wyh (200px, auto);
+                            border-radius: 8px;
+                            transition: .5s ease;
+                        }
+                        img:hover{
+                            transform: scale(1.1);
+                            transition: .5s ease;
+                        }
+                        p{
+                            padding-left: 4px;
+                        }
+                        a{
+                            border: 2px solid $color-border;
+                            border-radius: 4px;
+                            padding: 5px;
+                            position: absolute;
+                            bottom: 10px;
+                            left: 154px;
+                            background-color: whitesmoke;
+                            color: rgb(0, 0, 0);
+                        }
+                        a:hover{
+                            background-color: black;
+                            color: whitesmoke;
+                        }
+                    }
+                }
             }
         }
     }
     
-
 }
