@@ -6,57 +6,7 @@
   box-sizing: border-box; }
 
 /* MAIN INDEX */
-.main-index {
-  /* -- SECCION PRODUCTOS - INDEX --  */ }
-  .main-index .columna-medio hr {
-    margin: 1rem; }
-  .main-index .columna-medio .seccion-productos-index h3 {
-    text-decoration: underline;
-    text-align: center;
-    font-size: larger; }
-  .main-index .columna-medio .seccion-productos-index .contenedor-productos {
-    display: flex;
-    justify-content: center; }
-    .main-index .columna-medio .seccion-productos-index .contenedor-productos .nuestros-productos {
-      width: 900px;
-      height: auto;
-      display: grid;
-      grid-template-columns: repeat(3, 300px);
-      justify-items: center;
-      gap: 5px; }
-      .main-index .columna-medio .seccion-productos-index .contenedor-productos .nuestros-productos .producto {
-        background-color: #bebebe;
-        outline: 3px solid #2e2e2e;
-        border-radius: 8px;
-        box-shadow: 2px 3px 10px 0 black;
-        margin: 0.5rem;
-        padding: 0;
-        width: 200px;
-        height: 210px;
-        position: relative; }
-        .main-index .columna-medio .seccion-productos-index .contenedor-productos .nuestros-productos .producto img {
-          width: 200px;
-          height: auto;
-          border-radius: 8px;
-          transition: .5s ease; }
-        .main-index .columna-medio .seccion-productos-index .contenedor-productos .nuestros-productos .producto img:hover {
-          transform: scale(1.1);
-          transition: .5s ease; }
-        .main-index .columna-medio .seccion-productos-index .contenedor-productos .nuestros-productos .producto p {
-          padding-left: 4px; }
-        .main-index .columna-medio .seccion-productos-index .contenedor-productos .nuestros-productos .producto a {
-          border: 2px solid #2e2e2e;
-          border-radius: 4px;
-          padding: 5px;
-          position: absolute;
-          bottom: 10px;
-          left: 154px;
-          background-color: whitesmoke;
-          color: black; }
-        .main-index .columna-medio .seccion-productos-index .contenedor-productos .nuestros-productos .producto a:hover {
-          background-color: black;
-          color: whitesmoke; }
-
+/* -- MAIN (TIENDA) -- */
 /* -- BODY -- */
 body {
   font-family: 'Agdasima', sans-serif;
@@ -136,6 +86,8 @@ header {
       header .menu-nav ul li a:hover {
         color: #373131;
         text-decoration: underline; }
+    header .menu-nav ul .carrito-nav {
+      margin-left: 100px; }
 
 /* -- MAIN -- */
 main {
@@ -143,7 +95,8 @@ main {
   grid-template-columns: 20% 60% 20%;
   grid-template-rows: auto;
   /* -- PORTADA INDEX -- */
-  /* -- ASIDE CON REDES -- */ }
+  /* -- ASIDE CON REDES -- */
+  /* -- TIENDA (DISTRIBUCION DE LOS PRODUCTOS) -- */ }
   main .portada-index {
     display: flex;
     flex-direction: column;
@@ -199,6 +152,55 @@ main {
         font-size: 14px; }
         main .aside-redes .lista-contacto li i {
           padding: 2px; }
+  main .columna-medio hr {
+    margin: 1rem; }
+  main .columna-medio .seccion-productos h3 {
+    text-decoration: underline;
+    text-align: center;
+    font-size: larger;
+    color: #3e2e06; }
+  main .columna-medio .seccion-productos .contenedor-productos {
+    display: flex;
+    justify-content: center; }
+    main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos {
+      width: 900px;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 300px);
+      justify-items: center;
+      gap: 5px; }
+      main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos .producto {
+        background-color: #bebebe;
+        outline: 3px solid #2e2e2e;
+        border-radius: 8px;
+        box-shadow: 2px 3px 10px 0 black;
+        margin: 0.5rem;
+        padding: 0;
+        width: 200px;
+        height: 210px;
+        position: relative; }
+        main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos .producto img {
+          width: 200px;
+          height: auto;
+          border-radius: 8px;
+          transition: .5s ease; }
+        main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos .producto img:hover {
+          transform: scale(1.1);
+          transition: .5s ease; }
+        main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos .producto p {
+          padding-left: 4px; }
+        main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos .producto a {
+          border: 2px solid #2e2e2e;
+          border-radius: 4px;
+          padding: 5px;
+          position: absolute;
+          bottom: 10px;
+          left: 154px;
+          background-color: whitesmoke;
+          color: black; }
+        main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos .producto a:hover {
+          background-color: black;
+          color: whitesmoke; }
 
 /* -- FOOTER -- */
 .pie-pagina {
