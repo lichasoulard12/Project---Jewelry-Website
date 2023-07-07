@@ -96,6 +96,7 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
+            font-size: 18px;
             li{
                 padding: 0.5rem;
                 list-style: none;
@@ -110,8 +111,32 @@ header{
                     text-decoration: underline;
                 }
             }
+            /* -- menu desplegable de TIENDA -- */
+            .dropdown-menu{
+                display: none;
+                position: absolute;
+                background-color: rgb(230, 230, 230);
+                border: 1px solid #ccc;
+                z-index: 15;
+                padding: 5px;
+                @include wyh (fit-content, auto);
+                font-size: 16px;
+            }
+            .dropdown:hover .dropdown-menu{
+                display: block;
+                z-index: 15;
+            }
+            .dropdown:hover .flecha-abajo{
+                transform: rotate(180deg);
+                transition: .4s ease;
+            }
+            .flecha-abajo{
+                transition: .4s ease;
+            }
+            /* -- posición del carrito en el nav -- */
             .carrito-nav{
-                margin-left: 100px;
+                position: absolute;
+                right: 80px;
             }
         }
         
@@ -136,7 +161,7 @@ main{
             z-index: 10;
             bottom: 60px;
             @include marypad (2px, 0.5rem);
-            text-shadow: 1px 1px 5px black;
+            text-shadow: 1px 1px 8px goldenrod;
             text-align: center;
         }
         img{
@@ -202,9 +227,8 @@ main{
         }
         .seccion-productos{
             h3{
-                text-decoration: underline;
                 text-align: center;
-                font-size: larger;
+                font-size: 22px;
                 color: $color-h1;
             }
             .contenedor-productos{

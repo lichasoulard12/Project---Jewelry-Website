@@ -74,7 +74,10 @@ header {
   header .menu-nav ul {
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    font-size: 18px;
+    /* -- menu desplegable de TIENDA -- */
+    /* -- posición del carrito en el nav -- */ }
     header .menu-nav ul li {
       padding: 0.5rem;
       list-style: none;
@@ -86,8 +89,27 @@ header {
       header .menu-nav ul li a:hover {
         color: #373131;
         text-decoration: underline; }
+    header .menu-nav ul .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #e6e6e6;
+      border: 1px solid #ccc;
+      z-index: 15;
+      padding: 5px;
+      width: fit-content;
+      height: auto;
+      font-size: 16px; }
+    header .menu-nav ul .dropdown:hover .dropdown-menu {
+      display: block;
+      z-index: 15; }
+    header .menu-nav ul .dropdown:hover .flecha-abajo {
+      transform: rotate(180deg);
+      transition: .4s ease; }
+    header .menu-nav ul .flecha-abajo {
+      transition: .4s ease; }
     header .menu-nav ul .carrito-nav {
-      margin-left: 100px; }
+      position: absolute;
+      right: 80px; }
 
 /* -- MAIN -- */
 main {
@@ -109,7 +131,7 @@ main {
       bottom: 60px;
       margin: 2px;
       padding: 0.5rem;
-      text-shadow: 1px 1px 5px black;
+      text-shadow: 1px 1px 8px goldenrod;
       text-align: center; }
     main .portada-index img {
       margin: 0.5rem;
@@ -155,9 +177,8 @@ main {
   main .columna-medio hr {
     margin: 1rem; }
   main .columna-medio .seccion-productos h3 {
-    text-decoration: underline;
     text-align: center;
-    font-size: larger;
+    font-size: 22px;
     color: #3e2e06; }
   main .columna-medio .seccion-productos .contenedor-productos {
     display: flex;
