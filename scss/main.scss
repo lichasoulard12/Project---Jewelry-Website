@@ -10,9 +10,12 @@
 @import "herramientas/variables";
 
 // -- IMPORTS HTMLs --
-@import "pages/index.scss";
-@import "pages/tienda.scss";
+@import "pages/contacto.scss";
 
+
+html{
+    scroll-behavior: smooth;
+}
 /* -- BODY -- */ 
 body{
     font-family: 'Agdasima', sans-serif;
@@ -148,7 +151,6 @@ main{
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
-
     /* -- PORTADA INDEX -- */
     .portada-index{
         display: flex;
@@ -278,6 +280,19 @@ main{
                 }
             }
         }
+    }
+
+    .flecha-arriba{
+        position: relative;
+        a{
+            position: absolute;
+            bottom: 15px;
+            right: 58px;
+            img{
+                @include wyh (55px, auto);
+            }
+        }
+        
     }
 }
 

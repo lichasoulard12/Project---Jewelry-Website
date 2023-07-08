@@ -1,0 +1,54 @@
+.main-contacto{
+    p{
+        font-size: 18px;
+        padding: 0 4px 0 4px;
+        text-indent: 8px;
+    }
+    .contacto{
+        h3{
+            text-align: center;
+            font-size: 22px;
+            color: $color-h1;
+        }
+        ins{
+            color: $color-h1;
+        }
+        .formulario{
+            display: flex;
+            padding: 8px;
+            .comment-form{
+                display: flex;
+                flex-flow: column wrap;
+                color: black;
+                border-radius: 10px;
+                border: 2px solid $color-border;
+                padding: 0.5rem;
+                input{
+                    @include wyh (200px, 23px);
+                    font-family: 'Agdasima', sans-serif;
+                    font-size: 17px;
+                    margin-bottom: 0.4rem;
+                }
+                textarea{
+                    margin-bottom: 0.5rem;
+                    resize: none;
+                    font-family: 'Agdasima', sans-serif;
+                    font-size: 17px;
+                }
+                .boton-enviar{
+                    @include wyh (200px, 40px);
+                    background-color: black;
+                    color: rgb(230, 230, 230);
+                    border: none;
+                    padding: 0.5rem;
+                    border-radius: 5px;
+                }
+                .boton-enviar:hover{
+                    background-color: #757575;
+                    color: #202020;
+                }
+            }
+        }
+    }
+    
+}
