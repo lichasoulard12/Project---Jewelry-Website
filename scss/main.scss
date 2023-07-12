@@ -11,7 +11,7 @@
 
 // -- IMPORTS HTMLs --
 @import "pages/contacto.scss";
-
+@import "pages/sobrenosotros.scss";
 
 html{
     scroll-behavior: smooth;
@@ -189,7 +189,7 @@ main{
             text-decoration: underline;
             font-size: 20px;
         }
-        h4{
+        h4, p{
             font-size: 18px;
         }
         .lista-redes{
@@ -218,7 +218,6 @@ main{
                     padding: 2px;
                 }
             }
-            
         }
     }
 
@@ -250,6 +249,9 @@ main{
                         @include marypad (0.5rem, 0);
                         @include wyh (200px, 210px);
                         position: relative;
+                        del{
+                            color: rgb(219, 21, 21);
+                        }
                         img{
                             @include wyh (200px, auto);
                             border-radius: 8px;
@@ -282,18 +284,62 @@ main{
         }
     }
 
-    .flecha-arriba{
+    /* -- BOTONES -- */
+    .botones{
         position: relative;
-        a{
+
+        /* -- BOTÓN PARA VOLVER ARRIBA -- */
+        .flecha-arriba{
             position: absolute;
             bottom: 15px;
-            right: 58px;
-            img{
-                @include wyh (55px, auto);
+            right: 165px;
+            transition: .2s ease;
+            a{
+                img{
+                    @include wyh (55px, auto);
+                }
             }
         }
-        
+        .flecha-arriba:hover{
+            transform: scale(1.1);
+            transition: .3s ease;
+        }
+
+        /* -- BOTÓN DE WHATSAPP -- */
+        .boton-wa{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 10px;
+            padding-left: 3px;
+            position: fixed;
+            bottom: 68px;
+            right: 50px;
+            z-index: 25;
+            @include wyh (80px, 80px);
+            background-color: green;
+            border-radius: 50px;
+            box-shadow: 2px 3px 10px 0 black;
+            transition: .3s ease;
+            a{
+                z-index: 30;
+                color: black;
+                .icono-wa{
+                    font-size: 60px;
+                    line-height: 0;
+                }
+            }
+        }
+        .boton-wa:hover{
+            background-color: rgb(2, 95, 2);
+            transform: scale(1.1);
+            transition: .3s ease;
+            a{
+                color: white;
+            }
+        }
     }
+   
 }
 
 

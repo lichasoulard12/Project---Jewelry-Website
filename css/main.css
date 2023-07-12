@@ -6,7 +6,7 @@
   box-sizing: border-box; }
 
 .main-contacto p {
-  font-size: 18px;
+  font-size: 19px;
   padding: 0 4px 0 4px;
   text-indent: 8px; }
 
@@ -27,7 +27,8 @@
     color: black;
     border-radius: 10px;
     border: 2px solid #2e2e2e;
-    padding: 0.5rem; }
+    padding: 0.5rem;
+    font-size: 18px; }
     .main-contacto .contacto .formulario .comment-form input {
       width: 200px;
       height: 23px;
@@ -49,7 +50,18 @@
       border-radius: 5px; }
     .main-contacto .contacto .formulario .comment-form .boton-enviar:hover {
       background-color: #757575;
-      color: #202020; }
+      color: #202020;
+      cursor: pointer; }
+
+.main-sobrenosotros .seccion-sobrenosotros h3 {
+  text-align: center;
+  font-size: 22px;
+  color: #3e2e06; }
+
+.main-sobrenosotros .seccion-sobrenosotros p {
+  font-size: 19px;
+  padding: 0 4px 0 4px;
+  text-indent: 8px; }
 
 html {
   scroll-behavior: smooth; }
@@ -165,7 +177,8 @@ main {
   grid-template-rows: auto;
   /* -- PORTADA INDEX -- */
   /* -- ASIDE CON REDES -- */
-  /* -- TIENDA (DISTRIBUCION DE LOS PRODUCTOS) -- */ }
+  /* -- TIENDA (DISTRIBUCION DE LOS PRODUCTOS) -- */
+  /* -- BOTONES -- */ }
   main .portada-index {
     display: flex;
     flex-direction: column;
@@ -200,7 +213,7 @@ main {
     main .aside-redes h3 {
       text-decoration: underline;
       font-size: 20px; }
-    main .aside-redes h4 {
+    main .aside-redes h4, main .aside-redes p {
       font-size: 18px; }
     main .aside-redes .lista-redes {
       list-style: none; }
@@ -247,6 +260,8 @@ main {
         width: 200px;
         height: 210px;
         position: relative; }
+        main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos .producto del {
+          color: #db1515; }
         main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos .producto img {
           width: 200px;
           height: auto;
@@ -269,15 +284,49 @@ main {
         main .columna-medio .seccion-productos .contenedor-productos .nuestros-productos .producto a:hover {
           background-color: black;
           color: whitesmoke; }
-  main .flecha-arriba {
-    position: relative; }
-    main .flecha-arriba a {
+  main .botones {
+    position: relative;
+    /* -- BOTÓN PARA VOLVER ARRIBA -- */
+    /* -- BOTÓN DE WHATSAPP -- */ }
+    main .botones .flecha-arriba {
       position: absolute;
       bottom: 15px;
-      right: 58px; }
-      main .flecha-arriba a img {
+      right: 165px;
+      transition: .2s ease; }
+      main .botones .flecha-arriba a img {
         width: 55px;
         height: auto; }
+    main .botones .flecha-arriba:hover {
+      transform: scale(1.1);
+      transition: .3s ease; }
+    main .botones .boton-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 10px;
+      padding-left: 3px;
+      position: fixed;
+      bottom: 68px;
+      right: 50px;
+      z-index: 25;
+      width: 80px;
+      height: 80px;
+      background-color: green;
+      border-radius: 50px;
+      box-shadow: 2px 3px 10px 0 black;
+      transition: .3s ease; }
+      main .botones .boton-wa a {
+        z-index: 30;
+        color: black; }
+        main .botones .boton-wa a .icono-wa {
+          font-size: 60px;
+          line-height: 0; }
+    main .botones .boton-wa:hover {
+      background-color: #025f02;
+      transform: scale(1.1);
+      transition: .3s ease; }
+      main .botones .boton-wa:hover a {
+        color: white; }
 
 /* -- FOOTER -- */
 .pie-pagina {

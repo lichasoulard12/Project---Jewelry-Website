@@ -1,6 +1,7 @@
+//MAIN DE CONTACTO
 .main-contacto{
     p{
-        font-size: 18px;
+        font-size: 19px;
         padding: 0 4px 0 4px;
         text-indent: 8px;
     }
@@ -23,6 +24,7 @@
                 border-radius: 10px;
                 border: 2px solid $color-border;
                 padding: 0.5rem;
+                font-size: 18px;
                 input{
                     @include wyh (200px, 23px);
                     font-family: 'Agdasima', sans-serif;
@@ -46,6 +48,7 @@
                 .boton-enviar:hover{
                     background-color: #757575;
                     color: #202020;
+                    cursor: pointer;
                 }
             }
         }
