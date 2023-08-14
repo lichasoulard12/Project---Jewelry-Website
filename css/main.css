@@ -53,15 +53,64 @@
       color: #202020;
       cursor: pointer; }
 
-.main-sobrenosotros .seccion-sobrenosotros h3 {
-  text-align: center;
-  font-size: 22px;
-  color: #3e2e06; }
+.main-sobrenosotros {
+  height: 100vh; }
+  .main-sobrenosotros .seccion-sobrenosotros h3 {
+    text-align: center;
+    font-size: 22px;
+    color: #3e2e06; }
+  .main-sobrenosotros .seccion-sobrenosotros p {
+    font-size: 19px;
+    padding: 0 4px 0 4px;
+    text-indent: 8px; }
 
-.main-sobrenosotros .seccion-sobrenosotros p {
-  font-size: 19px;
-  padding: 0 4px 0 4px;
-  text-indent: 8px; }
+.main-carrito {
+  height: 100vh; }
+  .main-carrito .seccion-carrito h3 {
+    text-align: center;
+    font-size: 22px;
+    color: #3e2e06; }
+  .main-carrito .seccion-carrito p {
+    font-size: 19px;
+    padding: 0 4px 0 4px;
+    text-indent: 8px; }
+  .main-carrito .seccion-carrito div {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid black;
+    display: flex;
+    align-items: center; }
+    .main-carrito .seccion-carrito div h4 {
+      display: inline;
+      margin-left: 0.5rem; }
+    .main-carrito .seccion-carrito div img {
+      width: 105px;
+      height: auto;
+      border-radius: 5px; }
+    .main-carrito .seccion-carrito div span {
+      position: relative;
+      right: -60%; }
+    .main-carrito .seccion-carrito div hr {
+      display: block;
+      width: 80%; }
+  .main-carrito .metodos-pago-carrito {
+    border: 3px solid #2e2e2e;
+    border-radius: 9px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #bebebe;
+    box-shadow: 2px 3px 10px 0 black;
+    height: fit-content; }
+    .main-carrito .metodos-pago-carrito ul {
+      list-style: none; }
+      .main-carrito .metodos-pago-carrito ul li {
+        font-size: 18px; }
+        .main-carrito .metodos-pago-carrito ul li ul li {
+          text-indent: 4px; }
+    .main-carrito .metodos-pago-carrito h4 {
+      text-align: center;
+      font-size: 19px;
+      text-decoration: underline; }
 
 html {
   scroll-behavior: smooth; }
