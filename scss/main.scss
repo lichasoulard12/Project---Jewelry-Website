@@ -4,12 +4,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-// -- IMPORTS HERRAMIENTAS --
+
+//IMPORTS HERRAMIENTAS
 @import "herramientas/mixin";
 @import "herramientas/extend";
 @import "herramientas/variables";
 
-// -- IMPORTS HTMLs --
+//IMPORTS HTMLs
 @import "pages/contacto.scss";
 @import "pages/sobrenosotros.scss";
 @import "pages/carrito.scss";
@@ -21,26 +22,26 @@ html{
 body{
     font-family: 'Agdasima', sans-serif;
     background-color: rgb(230, 230, 230);
+    height: 100vh;
 }
 
-/* -- HEADER -- */
+/* --- HEADER --- */
 header{
     background-color: rgb(171, 166, 166);
-    @include marypad (0, 0.5rem);
+    @include marypad (0, .5rem);
     border-bottom: 3px solid $color-border;
-    
-    /* -- HEADER DE LA PÁGINA -- */
+
     h1{
         color: $color-h1;
-        padding: 0.5rem;
+        padding: .5rem;
     }
     hr{
-        margin-bottom: 0.5rem;
+        margin-bottom: .5rem;
     }
+
     .titulo-header{
         display: flex;
-
-        /* -- BARRA DE BUSQUEDA -- */
+        /* -- SEARCH BAR -- */
         .barra-busqueda{
             @include wyh (100px, 65px);
             .barra-busqueda-dos{
@@ -92,22 +93,20 @@ header{
             }
         }
     }
-    /* -- FIN BARRA DE BUSQUEDA -- */
 
-    /* -- MENÚ DE NAVEGACIÓN -- */
+    /* -- NAV MENU -- */
     .menu-nav{
         ul{
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 18px;
             li{
-                padding: 0.5rem;
+                padding: .5rem;
                 list-style: none;
-                font-size: larger;
+                font-size: 22px;
                 a{
                     text-decoration: none;
-                    text-shadow: 1px 1px 3px rgb(24, 23, 23);
+                    text-shadow: 1px 1px 7px rgb(24, 23, 23);
                     color: black;
                 }
                 a:hover{
@@ -115,7 +114,8 @@ header{
                     text-decoration: underline;
                 }
             }
-            /* -- menu desplegable de TIENDA -- */
+
+            /* -- dropdown menu of TIENDA -- */
             .dropdown-menu{
                 display: none;
                 position: absolute;
@@ -137,7 +137,7 @@ header{
             .flecha-abajo{
                 transition: .4s ease;
             }
-            /* -- posición del carrito en el nav -- */
+            /* -- shopping cart position -- */
             .carrito-nav{
                 position: absolute;
                 right: 80px;
@@ -147,12 +147,13 @@ header{
     }
 }
 
-/* -- MAIN -- */
+/* --- MAIN --- */
 main{
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto;
-    /* -- PORTADA INDEX -- */
+
+    /* -- FRONTPAGE INDEX -- */
     .portada-index{
         display: flex;
         flex-direction: column;
@@ -165,7 +166,6 @@ main{
             bottom: 60px;
             @include marypad (2px, 0.5rem);
             text-shadow: 1px 1px 8px goldenrod;
-            text-align: center;
         }
         img{
             margin: 0.5rem;
@@ -175,7 +175,7 @@ main{
         }
     }
 
-    /* -- ASIDE CON REDES -- */
+    /* -- SOCIAL NETWORKS ASIDE -- */
     .aside-redes{
         display: inline-block;
         border: 3px solid $color-border;
@@ -191,7 +191,7 @@ main{
             font-size: 20px;
         }
         h4, p{
-            font-size: 18px;
+            font-size: 20px;
         }
         .lista-redes{
             list-style: none;
@@ -285,11 +285,11 @@ main{
         }
     }
 
-    /* -- BOTONES -- */
+    /* -- BUTTONS -- */
     .botones{
         position: relative;
 
-        /* -- BOTÓN PARA VOLVER ARRIBA -- */
+        /* -- BUTTON TO GO BACK UP -- */
         .flecha-arriba{
             position: absolute;
             bottom: 15px;
@@ -306,7 +306,7 @@ main{
             transition: .3s ease;
         }
 
-        /* -- BOTÓN DE WHATSAPP -- */
+        /* -- WHATSAPP BUTTON -- */
         .boton-wa{
             display: flex;
             align-items: center;
@@ -340,11 +340,10 @@ main{
             }
         }
     }
-   
 }
 
 
-/* -- FOOTER -- */
+/* --- FOOTER --- */
 .pie-pagina{
     margin-top: 0.5rem;
     padding: 1rem;
@@ -356,11 +355,11 @@ main{
     bottom: 0;
     h4, p{
         color: white;
+        font-size: 18px;
     }
     .icons{
         i{
             padding: 0 5px 0 5px;
-            color: white;
             transition: transform .3s ease;
         }
         i:hover{
